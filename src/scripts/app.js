@@ -1,27 +1,25 @@
-const root  = document.querySelector('.todo-app');
+'use strict';
+
+const root = document.querySelector('.todo-app');
 
 const newInput = root.querySelector('.todo-input');
 const todoList = root.querySelector('.todo-list');
 const clearComplet = root.querySelector('.clear-complet');
-const filter = root.querySelector('.filter');
-
-
 
 // ----- function renew the amount of unfinished todos
 
-function updateInfo(){
+function updateInfo() {
   const notCompleted = root.querySelectorAll('.toggle:not(:checked)');
   const counter = root.querySelector('.todo-count');
+
   counter.innerHTML = `${notCompleted.length} items left`;
 }
 
-
 // ---- add elem by click on the button
-
 const btn = root.querySelector('.btn');
 
-btn.addEventListener("click", (event) => { 
-  if(!newInput.value) {
+btn.addEventListener('click', (event) => {
+  if (!newInput.value) {
     return;
   }
 
@@ -47,60 +45,24 @@ btn.addEventListener("click", (event) => {
 
 });
 
-// -------------
-
-
-
-// filter.addEventListener('click', (event) =>  {
-//   if (!event.target.dataset.filter) {
-//     return;
-//   }
-
-// const filterButtons = root.querySelectorAll('[data-filter]');
-//   for (const button of filterButtons) {
-//     button.classList.toggle('selected', event.target === button)
-//   }
-
-// const togglers = root.querySelectorAll('.toggle');
-
-// for (const toggler of togglers) {
-//   const item = toggler.closest('.todo-item');
-
-//   switch (event.target.dataset.filter) {
-//     case 'all':
-//       item.hidden = false;
-//       break;
-
-//     case 'active':
-//       item.hidden = toggler.checked;
-//       break;
-
-//     case 'complited':
-//       item.hidden = !toggler.checked;
-//       break; 
-//   }
-//  }
-// })
-
-
-//=========== complete all butten
+// complete all butten
 
 clearComplet.addEventListener('click', () => {
   const notCompleted = root.querySelectorAll('.toggle:checked');
 
-  for(const toggle of notCompleted) {
+  for (const toggle of notCompleted) {
     toggle.closest('.todo-item').remove();
   }
+});
 
-})
-// ------ add item by pressinf 'Enter'
+// add item by pressinf 'Enter'
 
 newInput.addEventListener('keydown', (event) => {
-  if(event.key !== 'Enter') {
+  if (event.key !== 'Enter') {
     return;
   }
 
-  if(!newInput.value) {
+  if (!newInput.value) {
     return;
   }
 
@@ -123,14 +85,13 @@ newInput.addEventListener('keydown', (event) => {
 
   // renew the amount of unfinished todos
   updateInfo();
+});
 
-})
-
-
-// ------delete element from todo
+// delete element from todo
 todoList.addEventListener('click', (event) => {
-//if we didnt click on the element witch matches '.delete' class, then no need to do anything
-  if(!event.target.matches('.delete')) {
+  // if we didnt click on the element witch matches '.delete' class,
+  // then no need to do anything
+  if (!event.target.matches('.delete')) {
     return;
   }
 
@@ -140,10 +101,11 @@ todoList.addEventListener('click', (event) => {
   updateInfo();
 });
 
-//-------change element from todo
+// change element from todo
 todoList.addEventListener('change', (event) => {
-  //if we didnt click on the element witch matches '.delete' class, then no need to do anything
-  if(!event.target.matches('.toggle')) {
+  // if we didnt click on the element witch matches '.delete' class,
+  // then no need to do anything
+  if (!event.target.matches('.toggle')) {
     return;
   }
 
@@ -152,8 +114,3 @@ todoList.addEventListener('change', (event) => {
   // renew the amount of unfinished todos
   updateInfo();
 });
-  
-
-
-
-
