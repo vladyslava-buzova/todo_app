@@ -42,7 +42,6 @@ btn.addEventListener('click', (event) => {
 
   // renew the amount of unfinished todos
   updateInfo();
-
 });
 
 // complete all butten
