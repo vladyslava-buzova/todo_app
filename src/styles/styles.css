@@ -28,7 +28,7 @@ li {
   padding-top: 20px;
   font-size: 40px;
   margin-bottom: 50px;
-  color:blueviolet;
+  color:hsl(242deg 88% 66%);;
 }
 
 .input {
@@ -51,18 +51,18 @@ li {
 
 .todo-button {
   width: 50px;
-  background-color: blueviolet;
+  background-color: hsl(242deg 88% 66%);;
   border-width: 0;
   color: white;
   transition: 0.3s ease;
 }
 
 .todo-button:hover {
-  background-color: blueviolet;
+  background-color: hsl(242deg 88% 66%);;
 }
 
 .color {
-  accent-color: blueviolet;
+  accent-color: hsl(242deg 88% 66%);;
 }
 
 .todo-item {
@@ -80,18 +80,18 @@ li {
 
 .button {
   background-color: white;
-  border: blueviolet;
+  border: hsl(242deg 88% 66%);;
   width:45px;
   font-size: 20px;
-  color: blueviolet;
+  color: hsl(242deg 88% 66%);;
   height: 100%;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .button:hover {
-  background-color: blueviolet;
-  color: white;
+  color: red;
+  font-size: 30px;
 }
 
 .toggle {
@@ -147,7 +147,7 @@ li {
 }
 
 .selected {
-  border: solid blueviolet 1px;
+  border: solid hsl(242deg 88% 66%) 1px;
   border-radius: 5px;
 }
 
