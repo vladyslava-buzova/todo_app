@@ -27,10 +27,8 @@ li {
   text-align: center;
   padding-top: 20px;
   font-size: 40px;
-  text-transform: uppercase;
   margin-bottom: 50px;
-  color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px blueviolet, 0 0 5px rgb(48, 11, 83);
+  color:blueviolet;
 }
 
 .input {
@@ -168,10 +166,10 @@ li {
 
    .todo-app{
     width: 90%;
+    background-color: #fff;
    }
 
    .todo-count{
     width: 100%;
-
    }
 }
