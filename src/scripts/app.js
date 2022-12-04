@@ -109,7 +109,8 @@ todoList.addEventListener('change', (event) => {
     return;
   }
 
-  event.target.closest('.todo-item').classList.toggle('completed', event.target.checked);
+  event.target.closest('.todo-item')
+    .classList.toggle('completed', event.target.checked);
 
   // renew the amount of unfinished todos
   updateInfo();
